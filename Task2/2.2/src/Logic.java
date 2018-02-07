@@ -1,4 +1,4 @@
-public class Logic {
+!public class Logic {
 
     private static final String VOWELS = "eyuioa";
 
@@ -27,6 +27,6 @@ public class Logic {
     }
 
     public static boolean var_4(char a){
-        return VOWELS.indexOf(Character.toLowerCase(a)) == -1;
+        return VOWELS.indexOf(Character.toLowerCase(a)) != -1;
     }
 }
