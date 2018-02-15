@@ -2,12 +2,12 @@ package com.company;
 
 public class View {
     public static void main(String[] args) {
-        System.out.println(NumbWorker.theBiggestDigitalNumber(321654));
-        System.out.println(NumbWorker.isSimple(100));
-        System.out.println(NumbWorker.isPalindrome(13531));
-        System.out.println(NumbWorker.quantityOfDifferentDigNumbs(1234506789));
-        System.out.println(NumbWorker.allSimpleDivs(123456));
-        System.out.println(NumbWorker.leastCommonMult(70, 120));
-        System.out.println(NumbWorker.greatestCommonDiv(70, 35));
+        System.out.println(NumbWorker.countBiggestDigitalNumber(321654));
+        System.out.println(NumbWorker.checkForSimple(100));
+        System.out.println(NumbWorker.checkPalindrome(13531));
+        System.out.println(NumbWorker.countQuantityOfDifferentDigNumbs(1234506789));
+        System.out.println(NumbWorker.countAllSimpleDivs(123456));
+        System.out.println(NumbWorker.countLeastCommonMult(70, 120));
+        System.out.println(NumbWorker.countGreatestCommonDiv(70, 35));
     }
 }
