@@ -17,12 +17,13 @@ public class CarTaxi extends BaseTaxi {
     @Override
     public void putOnPassenger(Passenger passenger) throws TaxiIsFullException {
         if (passengers.size() < MAX_SEATS)
-            super.putOnPassenger(passenger);
+            passengers.add(passenger);
         else
             throw new TaxiIsFullException();
     }
 
-    public void makeStop(Passenger passenger) {
-        passengers.remove(passenger);
+    public void driveFaster() {
+
     }
+
 }

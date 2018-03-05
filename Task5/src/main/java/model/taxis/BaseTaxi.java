@@ -4,6 +4,7 @@ import model.Exceptions.TaxiIsFullException;
 import model.other.Driver;
 import model.other.Passenger;
 
+import java.util.Arrays;
 import java.util.List;
 
 public abstract class BaseTaxi {
@@ -22,11 +23,13 @@ public abstract class BaseTaxi {
         this.rout = rout;
     }
 
-    public void putOnPassenger(Passenger passenger) throws TaxiIsFullException {
-        passengers.add(passenger);
-    }
+    public abstract void putOnPassenger(Passenger passenger) throws TaxiIsFullException;
 
-    public abstract void makeStop(Passenger passenger);
+    public abstract void driveFaster(); // автобус и автомобиль по-разному будут ускорять свое движение
+
+    public void makeStop(Passenger... passenger) {
+        passengers.removeAll(Arrays.asList(passenger));
+    }
 
 
     public int getCost() {
@@ -55,5 +58,12 @@ public abstract class BaseTaxi {
 
     public void setRout(List<String> rout) {
         this.rout = rout;
+    }
+
+    @Override
+    public String toString() {
+        return "BaseTaxi{" +
+                "cost=" + cost +
+                '}';
     }
 }

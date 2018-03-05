@@ -20,12 +20,12 @@ public class TaxiParkUtil {
             if (random.nextBoolean()){
                 park.addTaxi(new CarTaxi(Math.abs(random.nextInt()%TAXI_COST_RANGE),
                         new Driver(""+ random.nextInt(),
-                                Math.abs(random.nextInt()%DRIVER_AGE_RANGE), Driver.CATEGORY_B),
+                                Math.abs(random.nextInt()%DRIVER_AGE_RANGE), Driver.Category.A),
                         new ArrayList<String>()));
             } else {
                 park.addTaxi(new BusTaxi(Math.abs(random.nextInt()%TAXI_COST_RANGE),
                         new Driver(""+ random.nextInt(),
-                                Math.abs(random.nextInt()%DRIVER_AGE_RANGE), Driver.CATEGORY_C),
+                                Math.abs(random.nextInt()%DRIVER_AGE_RANGE), Driver.Category.C),
                         new ArrayList<String>()));
             }
         }

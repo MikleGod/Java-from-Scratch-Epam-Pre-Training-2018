@@ -2,14 +2,13 @@ package model.other;
 
 public class Driver {
 
-    public final static String CATEGORY_A = "A";
-    public final static String CATEGORY_B = "B";
-    public final static String CATEGORY_C = "C";
-    public final static String CATEGORY_D = "D";
+    public enum Category {
+        A, B, C, D
+    }
 
     private String fullName;
     private int age;
-    private String category;
+    private Category category;
 
     public String getFullName() {
         return fullName;
@@ -27,15 +26,15 @@ public class Driver {
         this.age = age;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 
-    public Driver(String fullName, int age, String category) {
+    public Driver(String fullName, int age, Category category) {
 
         this.fullName = fullName;
         this.age = age;

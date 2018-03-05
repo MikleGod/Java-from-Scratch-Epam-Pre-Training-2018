@@ -1,13 +1,19 @@
 package controllers;
 
+import model.Task8.Sorter;
 import model.TaxiPark;
+import model.TaxiParkManager;
 import util.TaxiParkUtil;
 import view.View;
 
 public class Main {
     public static void main(String[] args) {
-        TaxiPark park = TaxiPark.getInstance();
-        TaxiParkUtil.fullInParkByRandom(park, 500);
-        View.printf(park.countCostOfPark() + "$");
+        TaxiParkManager manager = TaxiParkManager.getInstance();
+        TaxiPark taxiPark = manager.getTaxiPark("HELLO");
+        TaxiParkUtil.fullInParkByRandom(taxiPark, 20);
+        View.printf(taxiPark);
+        Sorter sorter = Sorter.getInstance();
+        sorter.mergeSort(taxiPark);
+        View.printf(taxiPark);
     }
 }
